@@ -1,0 +1,9 @@
+FROM python:3.5
+MAINTAINER Maxime Delorme <maxime.delorme@gmail.com>
+
+RUN apt-get update
+RUN apt-get install -y gfortran
+RUN apt-get install -y imagemagick
+RUN pip install numpy scipy matplotlib
+COPY build.sh /project/build
+
